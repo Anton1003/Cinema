@@ -13,6 +13,9 @@
 		CE360FA225F155BF00F0B1B5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE360FA025F155BF00F0B1B5 /* Main.storyboard */; };
 		CE360FA425F155C700F0B1B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE360FA325F155C700F0B1B5 /* Assets.xcassets */; };
 		CE360FA725F155C700F0B1B5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE360FA525F155C700F0B1B5 /* LaunchScreen.storyboard */; };
+		CE360FB625F5618A00F0B1B5 /* MoviesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE360FB525F5618A00F0B1B5 /* MoviesTableViewController.swift */; };
+		CE360FB925F561B300F0B1B5 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE360FB825F561B300F0B1B5 /* Movie.swift */; };
+		CE360FBC25F6419000F0B1B5 /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE360FBB25F6419000F0B1B5 /* MovieTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		CE360FA325F155C700F0B1B5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE360FA625F155C700F0B1B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE360FA825F155C700F0B1B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE360FB525F5618A00F0B1B5 /* MoviesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesTableViewController.swift; sourceTree = "<group>"; };
+		CE360FB825F561B300F0B1B5 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		CE360FBB25F6419000F0B1B5 /* MovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +66,9 @@
 				CE360F9C25F155BF00F0B1B5 /* SceneDelegate.swift */,
 				CE360F9E25F155BF00F0B1B5 /* ViewController.swift */,
 				CE360FA025F155BF00F0B1B5 /* Main.storyboard */,
+				CE360FB525F5618A00F0B1B5 /* MoviesTableViewController.swift */,
+				CE360FBB25F6419000F0B1B5 /* MovieTableViewCell.swift */,
+				CE360FB825F561B300F0B1B5 /* Movie.swift */,
 				CE360FA325F155C700F0B1B5 /* Assets.xcassets */,
 				CE360FA525F155C700F0B1B5 /* LaunchScreen.storyboard */,
 				CE360FA825F155C700F0B1B5 /* Info.plist */,
@@ -75,6 +84,7 @@
 			buildConfigurationList = CE360FAB25F155C700F0B1B5 /* Build configuration list for PBXNativeTarget "Cinema" */;
 			buildPhases = (
 				CE360FAF25F51B8100F0B1B5 /* ShellScript */,
+				CE360FB125F5284F00F0B1B5 /* ShellScript */,
 				CE360F9325F155BF00F0B1B5 /* Sources */,
 				CE360F9425F155BF00F0B1B5 /* Frameworks */,
 				CE360F9525F155BF00F0B1B5 /* Resources */,
@@ -151,6 +161,23 @@
 			shellPath = /bin/sh;
 			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
+		CE360FB125F5284F00F0B1B5 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftformat >/dev/null; then\n  swiftformat .\nelse\n  echo \"warning: SwiftFormat not installed, download from https://github.com/nicklockwood/SwiftFormat\"\nfi\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -158,9 +185,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE360FB625F5618A00F0B1B5 /* MoviesTableViewController.swift in Sources */,
 				CE360F9F25F155BF00F0B1B5 /* ViewController.swift in Sources */,
+				CE360FBC25F6419000F0B1B5 /* MovieTableViewCell.swift in Sources */,
 				CE360F9B25F155BF00F0B1B5 /* AppDelegate.swift in Sources */,
 				CE360F9D25F155BF00F0B1B5 /* SceneDelegate.swift in Sources */,
+				CE360FB925F561B300F0B1B5 /* Movie.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
