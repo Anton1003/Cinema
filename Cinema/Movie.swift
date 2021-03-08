@@ -7,31 +7,32 @@
 
 import Foundation
 ///
-struct Movie: Codable {
+struct Movie {
     let title: String
-    let categories: [String]
+    let categories: String
     let duration: String
     let rating: Double
     let summary: String
     let imageName: String
-
-    var imageSmall: String {
-        return imageName + "-small.jpg"
-    }
-
-    var imageWide: String {
-        return imageName + "-widt.jpg"
-    }
-
-    var categoriesDiscription: String {
-        return categories.joined(separator: " | ")
-    }
-
-    enum CodingKeys: String, CodingKey {
-        case title
-        case categories
-        case duration
-        case summary
-        case imageName = "image_name"
-    }
 }
+
+//    var imageSmall: String {
+//        return imageName + "-small.jpg"
+//    }
+//
+//    var imageWide: String {
+//        return imageName + "-widt.jpg"
+//    }
+//
+//    var categoriesDiscription: String {
+//        return categories.joined(separator: " | ")
+//    }
+//
+//    enum CodingKeys: String, CodingKey {
+//        case title
+//        case categories
+//        case duration
+//        case summary
+//        case imageName = "image_name"
+//    }
+// }

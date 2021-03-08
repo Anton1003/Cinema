@@ -22,11 +22,11 @@ class MovieTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
 
-    func prepare(movie: Movie){
-        posterImageView.image = UIImage(named: movie.imageWide)
+    func prepare(movie: Movie) {
+        posterImageView.image = UIImage(named: movie.imageName)
         titleLabel.text = movie.title
         summaryLabel.text = movie.summary
         ratingLabel.text = "\(movie.rating)/10"
-        categoriesLabel.text = movie.categoriesDiscription
+        categoriesLabel.text = movie.categories
     }
 }
