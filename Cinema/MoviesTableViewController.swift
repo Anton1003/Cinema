@@ -14,7 +14,15 @@ class MoviesTableViewController: UITableViewController {
         super.viewDidLoad()
         loadData()
     }
-
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let vc = segue.destination as! MovieDetailViewController
+        guard let row = tableView.indexPathForSelectedRow?.row else {return}
+        
+        let movie = movies[row]
+        vc.movie = movie
+    }
+    
     func loadData() {
         guard let jsonUtl = Bundle.main.url(forResource: "movies", withExtension: "json"), let data = try? Data(contentsOf: jsonUtl) else { return }
         do {
@@ -27,7 +35,7 @@ class MoviesTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in _: UITableView) -> Int {
-        return 0
+        return 1
     }
 
     override func tableView(_: UITableView, numberOfRowsInSection _: Int) -> Int {
@@ -35,8 +43,8 @@ class MoviesTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "movieCell", for: indexPath) as? MovieTableViewCell else { return UITableViewCell()}
-        
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "movieCell", for: indexPath) as? MovieTableViewCell else { return UITableViewCell() }
+        cell.prepare(movie: movies[indexPath.row])
         return cell
     }
 
