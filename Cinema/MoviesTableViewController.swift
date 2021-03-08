@@ -12,7 +12,6 @@ class MoviesTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-//        loadData()
         addItem()
     }
 
