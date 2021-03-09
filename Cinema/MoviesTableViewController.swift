@@ -12,7 +12,9 @@ class MoviesTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        addItem()
+        loadData()
+
+//        addItem()
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender _: Any?) {
@@ -24,29 +26,29 @@ class MoviesTableViewController: UITableViewController {
         }
     }
 
-    func addItem() {
-        movies.append(Movie(title: "Deadpool", categories: "action", duration: "1h43min", rating: 9.2, summary: "some about Deadpool", imageName: "dead"))
-        movies.append(Movie(title: "Deadpool", categories: "action", duration: "1h43min", rating: 9.2, summary: "some about Deadpool", imageName: "dead"))
-        movies.append(Movie(title: "Deadpool", categories: "action", duration: "1h43min", rating: 9.2, summary: "some about Deadpool", imageName: "dead"))
-        movies.append(Movie(title: "Deadpool", categories: "action", duration: "1h43min", rating: 9.2, summary: "some about Deadpool", imageName: "dead"))
-        movies.append(Movie(title: "Deadpool", categories: "action", duration: "1h43min", rating: 9.2, summary: "some about Deadpool", imageName: "dead"))
-        movies.append(Movie(title: "Deadpool", categories: "action", duration: "1h43min", rating: 9.2, summary: "some about Deadpool", imageName: "dead"))
-        movies.append(Movie(title: "Deadpool", categories: "action", duration: "1h43min", rating: 9.2, summary: "some about Deadpool", imageName: "dead"))
-        movies.append(Movie(title: "Deadpool", categories: "action", duration: "1h43min", rating: 9.2, summary: "some about Deadpool", imageName: "dead"))
-        movies.append(Movie(title: "Deadpool", categories: "action", duration: "1h43min", rating: 9.2, summary: "some about Deadpool", imageName: "dead"))
-        movies.append(Movie(title: "Deadpool", categories: "action", duration: "1h43min", rating: 9.2, summary: "some about Deadpool", imageName: "dead"))
-        movies.append(Movie(title: "Deadpool", categories: "action", duration: "1h43min", rating: 9.2, summary: "some about Deadpool", imageName: "dead"))
-        movies.append(Movie(title: "Deadpool", categories: "action", duration: "1h43min", rating: 9.2, summary: "some about Deadpool", imageName: "dead"))
-    }
-
-//    func loadData() {
-//        guard let jsonUtl = Bundle.main.url(forResource: "movies", withExtension: "json"), let data = try? Data(contentsOf: jsonUtl) else { return }
-//        do {
-//            movies = try JSONDecoder().decode([Movie].self, from: data)
-//        } catch {
-//            print(error.localizedDescription)
-//        }
+//    func addItem() {
+//        movies.append(Movie(title: "Deadpool", categories: "action", release: "1h43min", rating: 9.2, summary: "some about Deadpool", imageName: "dead"))
+//        movies.append(Movie(title: "Deadpool", categories: "action", release: "1h43min", rating: 9.2, summary: "some about Deadpool", imageName: "dead"))
+//        movies.append(Movie(title: "Deadpool", categories: "action", release: "1h43min", rating: 9.2, summary: "some about Deadpool", imageName: "dead"))
+//        movies.append(Movie(title: "Deadpool", categories: "action", release: "1h43min", rating: 9.2, summary: "some about Deadpool", imageName: "dead"))
+//        movies.append(Movie(title: "Deadpool", categories: "action", release: "1h43min", rating: 9.2, summary: "some about Deadpool", imageName: "dead"))
+//        movies.append(Movie(title: "Deadpool", categories: "action", release: "1h43min", rating: 9.2, summary: "some about Deadpool", imageName: "dead"))
+//        movies.append(Movie(title: "Deadpool", categories: "action", release: "1h43min", rating: 9.2, summary: "some about Deadpool", imageName: "dead"))
+//        movies.append(Movie(title: "Deadpool", categories: "action", release: "1h43min", rating: 9.2, summary: "some about Deadpool", imageName: "dead"))
+//        movies.append(Movie(title: "Deadpool", categories: "action", release: "1h43min", rating: 9.2, summary: "some about Deadpool", imageName: "dead"))
+//        movies.append(Movie(title: "Deadpool", categories: "action", release: "1h43min", rating: 9.2, summary: "some about Deadpool", imageName: "dead"))
+//        movies.append(Movie(title: "Deadpool", categories: "action", release: "1h43min", rating: 9.2, summary: "some about Deadpool", imageName: "dead"))
+//        movies.append(Movie(title: "Deadpool", categories: "action", release: "1h43min", rating: 9.2, summary: "some about Deadpool", imageName: "dead"))
 //    }
+
+    func loadData() {
+        guard let jsonURL = URL(string: "https://api.themoviedb.org/4/list/1?api_key=1383ccd603d60a04c2085457ec3c9e0d"), let data = try? Data(contentsOf: jsonURL) else { return }
+        do {
+            movies = try JSONDecoder().decode([Movie].self, from: data)
+        } catch {
+            print(error.localizedDescription)
+        }
+    }
 
     // MARK: - Table view data source
 

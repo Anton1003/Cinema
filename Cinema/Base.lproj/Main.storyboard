@@ -16,6 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="sectionIndexBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="movieCell" rowHeight="169" id="Cmv-5M-E9a" customClass="MovieTableViewCell" customModule="Cinema" customModuleProvider="target">
@@ -74,6 +75,7 @@
                                         <constraint firstItem="LFx-ub-w5M" firstAttribute="leading" secondItem="mTN-uT-U17" secondAttribute="trailing" constant="10" id="qJN-kF-R2e"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <outlet property="categoriesLabel" destination="XrT-ex-tna" id="AOz-Q5-QdS"/>
                                     <outlet property="posterImageView" destination="mTN-uT-U17" id="jfG-7H-lxN"/>

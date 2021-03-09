@@ -17,6 +17,7 @@
 		CE360FB925F561B300F0B1B5 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE360FB825F561B300F0B1B5 /* Movie.swift */; };
 		CE360FBC25F6419000F0B1B5 /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE360FBB25F6419000F0B1B5 /* MovieTableViewCell.swift */; };
 		CE360FBF25F64B9700F0B1B5 /* MovieDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE360FBE25F64B9700F0B1B5 /* MovieDetailViewController.swift */; };
+		CE360FC525F7DE9D00F0B1B5 /* Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE360FC425F7DE9B00F0B1B5 /* Loader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		CE360FB825F561B300F0B1B5 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		CE360FBB25F6419000F0B1B5 /* MovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
 		CE360FBE25F64B9700F0B1B5 /* MovieDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailViewController.swift; sourceTree = "<group>"; };
+		CE360FC425F7DE9B00F0B1B5 /* Loader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 				CE360FBE25F64B9700F0B1B5 /* MovieDetailViewController.swift */,
 				CE360FBB25F6419000F0B1B5 /* MovieTableViewCell.swift */,
 				CE360FB825F561B300F0B1B5 /* Movie.swift */,
+				CE360FC425F7DE9B00F0B1B5 /* Loader.swift */,
 				CE360FA325F155C700F0B1B5 /* Assets.xcassets */,
 				CE360FA525F155C700F0B1B5 /* LaunchScreen.storyboard */,
 				CE360FA825F155C700F0B1B5 /* Info.plist */,
@@ -194,6 +197,7 @@
 				CE360F9B25F155BF00F0B1B5 /* AppDelegate.swift in Sources */,
 				CE360FBF25F64B9700F0B1B5 /* MovieDetailViewController.swift in Sources */,
 				CE360F9D25F155BF00F0B1B5 /* SceneDelegate.swift in Sources */,
+				CE360FC525F7DE9D00F0B1B5 /* Loader.swift in Sources */,
 				CE360FB925F561B300F0B1B5 /* Movie.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

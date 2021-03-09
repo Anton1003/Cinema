@@ -19,11 +19,11 @@ class MovieDetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        bigPosterImageView.image = UIImage(named: movie.imageName)
-        titleLabel.text = movie.title
+        bigPosterImageView.image = UIImage(named: "\(movie.imageName)")
+        titleLabel.text = "\(movie.title)"
         ratingLabel.text = "\(movie.rating)/10"
-        summaryTextView.text = movie.summary
-        categoriesLabel.text = movie.duration
-        durationLabel.text = movie.duration
+        summaryTextView.text = "\(movie.summary)"
+        categoriesLabel.text = "\(movie.categories)"
+        durationLabel.text = "\(movie.release)"
     }
 }
